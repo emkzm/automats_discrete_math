@@ -1,7 +1,4 @@
 class Automat:
-	#T = [[]]
-	
-	
 	def __init__(self, T):
 			self.T = T
 			
@@ -13,10 +10,6 @@ class Automat:
 			s = self.delta_(s, x)
 		output = self.T[s-1][x-1+(len(T[0])/2]
 		return output
-	
-	
-	#def delta_(self, s, x):
-	#	return T[s-1][x-1]
 	
 	def delta_(self, s, p):
 		while len(str(p)) > 1:
@@ -57,7 +50,7 @@ T = [
 ]
 
 A = Automat(T)
-A.printTable()
+
 while(True):
 	cmess = str(input("# "))
 	if cmess == "help":
